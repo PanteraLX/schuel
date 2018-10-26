@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Puls</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let singlePuls of puls" href="/{{singlePuls.id}}">
+      {{singlePuls.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

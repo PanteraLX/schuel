@@ -4,16 +4,13 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>
-            Home
+            Player
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
-        <ion-item *ngFor="let item of items" href="/{{item.id}}">
-            <ion-icon [name]="item.icon" item-start></ion-icon>
-            {{item.name}}
-        </ion-item>
-    </ion-list>
+    <app-audio [file]="audioFile"></app-audio>
+    <app-video [width]="deviceWidth" *ngIf="addVideo"></app-video>
+    <app-notes [width]="deviceWidth" *ngIf="addNotes"></app-notes>
 </ion-content>

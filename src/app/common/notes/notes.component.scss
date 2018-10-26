@@ -1,0 +1,29 @@
+#container {
+  width: 1200px;
+  height: 120px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+#container > div {
+  width: 500px;
+  height: 120px;
+  white-space: nowrap;
+  animation: move-score 3s linear infinite;
+}
+
+#container:hover > div {
+  animation-play-state: paused;
+}
+
+@keyframes move-score {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: -100px;
+  }
+  100% {
+    margin-left: -200px;
+  }
+}

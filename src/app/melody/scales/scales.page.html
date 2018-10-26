@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tonleitern</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let scale of scales">
+    <ion-list>
+      <ion-list-header>
+        {{scale.name}}
+      </ion-list-header>
+      <ion-item *ngFor="let tonality of scale.items" href="/{{tonality.id}}">
+        {{tonality.name}}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header>
+        Griechische Tonarten
+      </ion-list-header>
+      <ion-item *ngFor="let greekScale of greekScales" href="/{{greekScale.id}}">
+        {{greekScale.name}}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
